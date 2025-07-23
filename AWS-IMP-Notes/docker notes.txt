@@ -1,0 +1,54 @@
+docket container ls is used to list all the containers
+docker container ls-a is used to list all the hidden container 
+docker container rm command is used to removes the container 
+ eg: container id is 3d4bab29dd67 you can remove it using docker container rm 3d it is short notation
+
+docker ps-it is used to list all the running containers
+TAG - it is basically used to display the version of images for example it display latest or 0.4.5 version 
+
+DOCKER DAEMON:
+It is the core component in docker 
+first docker client contacts the docker daemon then docker daemon pulls the image from docker hub and then creates a new container from the image and finally it streams the output to the docker client 
+
+PORT BINDING:
+Mapping the host machine port to container port with -p tag know as port binding 
+eg:docker run -p 8080:3306 Image_name
+(hostport:container port)
+
+DOCKER COMPOSE:
+It is used to run multiple containers at the same time it is a docker tool what it does basically is writes all the command in the file name yaml and then runs the multiple application  
+eg:docker yaml 
+
+DOCKER VOLUME:
+-Dokcer volumes are persistent data stores for containers (if you stop a container the data will be lost volume just creates a extra space in which it stores  data so when you restart the container you will get back your original data or lets say if you want to create another new container with no data initially so in that case you can use volume to map same data to this new container)
+-The volume data(backup or extra space) is created in host machine which is then mapped to application in container 
+eg: docker -v hostpath:containerpath
+docker run -it -v /users/abs/desktop/data:testapp/data container_name
+docker volume ls
+docker volume create vol_name (named volume)
+docker volume rm vol_name
+Named Volumes:(the extra volume space is created by docker container for named and anonymous)
+docker run -v vol_name:cont_dir
+Anonymous volume : docker run -v Mountpath (vol_name)
+Bind mount: docker run -v host_dir:cont_dir(in this volume is created by host machine)
+Docker volume prune : removes all the unwanted unsued and unmapped volumes that persist in the container and that is generally used to target the anonymouse volumes 
+
+commands:-
+docker pull image_name
+docker images:list all the existing images
+docker run image_name - builds container 
+docker build -t myimage- builds image from dockerfile
+docker run -it image_name: it means interactive it takes input and output from terminal 
+docker ps -a : list all running containers including stopped container 
+docker start cont-name or cont-id : starts the existing container 
+docker stop cont-name: stops the existing container 
+docker rm - removes the container 
+docker rmi: it removes the image (to remove the image you need to remove the respective container first)
+docker pull image_name:version
+docker run -d image_name
+docker run -p 8080:3306 Image_name:(hostport:container port)
+docker network ls -lists all the available network
+docker network rm network name : removes the network 
+docker compose -f file.yaml up or down: it is used to run multiple containers using yaml file 
+docker volume ls =listing all the available volumes
+

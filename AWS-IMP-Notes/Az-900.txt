@@ -1,0 +1,45 @@
+CLoud computing is the delivery of computing services over the internet.
+
+Azure resources are components like storage,virtual machines,and networks and that are available to build cloud solutions 
+
+Azure virtual network enbables azure resources to communicate with each other over the internet and on premises networks 
+
+network peering: connect your private networks directly together 
+
+Azure expressroute extends on premises networks into azure over a private connection that is facilitated by a connectivity provider (with higher performance and security feature )
+
+Vpn -conncets securely over public internet
+
+
+AzureDNS: translation of human readable domain names into machine friendly IP addresses
+A dynamic platform for managing and hosting dns domains
+
+
+
+
+
+
+
+
+
+
+
+
+
+resource tags-this is another way to organize resources,it also provides extra info or metadata about your resources.
+
+The purpose of microsot purview is to data governance ,risk, compliance and
+unified data governance.
+
+Azure Policy enables you to define both individual policies and groups of related policies, known as initiatives. Azure Policy evaluates your resources and highlights resources that aren't compliant with the policies you've created. Azure Policy can also prevent noncompliant resources from being created. 
+
+THE purpose of resource locks-it prevents resource from being accidentally deleted or changed
+
+The Microsoft Service Trust Portal is a portal that provides access to various content, tools, and other resources about Microsoft security, privacy, and compliance practices.
+
+The purpose of azure arc:- Managing hybrid and multi-cloud environments can rapidly get complicated. 
+
+Azure resource manager-deployment and management service for azure like create delete update resources in your account.
+
+
+ 

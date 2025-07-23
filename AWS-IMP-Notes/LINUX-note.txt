@@ -1,0 +1,7 @@
+LINUX:-
+
+cd . - takes you to current directory 
+cd .. - takes you to  parent directory 
+cd ~  - take you to home directory 
+cd -  - this will take you to previous directory 
+

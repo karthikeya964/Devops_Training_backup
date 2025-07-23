@@ -1,0 +1,93 @@
+Kubernetes:
+
+Kubernetes (K8s) is an open-source container orchestration platform that helps automate deployment, scaling, and management of containerized applications. It was originally developed by Google and is now maintained by the Cloud Native Computing Foundation (CNCF).
+
+1️⃣ Basics of Kubernetes
+🔹 Why Kubernetes?
+Containers help package applications with dependencies, but managing multiple containers across multiple servers is complex.
+
+Kubernetes automates deployment, scaling, networking, and health checks.
+
+🔹 Key Concepts
+Component	Description
+Pod	-The smallest deployable unit in Kubernetes, containing one or more containers.
+Node	-A physical or virtual machine in the cluster that runs workloads.
+Cluster	-A set of nodes managed by Kubernetes.
+Deployment -Manages the rollout and updates of Pods.
+Service	-Provides network access to a set of Pods.
+ConfigMap & Secret -Store configuration data securely.
+Namespace	-Logical partitioning of resources in a cluster.
+
+2️⃣ Kubernetes Architecture
+🔹 Master Node Components
+API Server (kube-apiserver) → The entry point for all Kubernetes commands.
+
+Scheduler (kube-scheduler) → Assigns Pods to Nodes based on resource availability.
+
+Controller Manager (kube-controller-manager) → Handles scaling, node monitoring, and job execution.
+
+etcd → A distributed key-value store that keeps cluster state.
+
+🔹 Worker Node Components
+Kubelet → Agent running on each Node that ensures the assigned Pods are running.
+
+Container Runtime → Runs containers (Docker, containerd, etc.).
+
+Kube Proxy → Manages networking and load balancing.
+
+
+
+
+Yaml Introduction:
+k8 uses yaml files as inputs for the creation of objects such as pods,replicas,deployment services etc 
+yaml file structure should contain 4 main keys 
+-apiVersion
+-kind
+-metadata
+-spec
+
+
+Replica set:
+-A ReplicaSet is a Kubernetes resource that ensures a specified number of identical Pods are running at all times. If a Pod fails or is deleted, the ReplicaSet automatically creates a new one to maintain the desired count.
+
+-Multiple instances of pod 
+-why we use replicaset is for high availability and load balancing
+
+commands:
+kubectl create -f replicaset-definition.yml = (creates the replicaset the -f flag is used take file as input)
+
+kubectl apply -f replicaset.yaml = deploying a replicaset
+
+kubectl get replicaset = it is used to get no of  replicaset available 
+kubectl deleted replicaset myapp-replicaset =deletes the replicas(pods)
+
+kubectl replace-f replicaset-definiton.yml -it is used to update the replicas add new pods
+kubectl scale --replicas=6 -f replicaset.definition.yml- same command as above scale the pods (scaling up or down based on demand
+
+kubectl delete replicaset my-replicaset:- deletes the replicaset 
+
+kubectl delete pod <pod-name> - delete's the pod 
+
+kubectl describe replicaset <replica set name> - describe the replicaset in detail
+
+kubectl edit replicaset <replica set name> - it opens the yaml file in which you can edit the no of replicas required 
+
+
+Deployment:
+A deployment in k8 is used to manage and scale  a group of replicated pods efficiently it also provides a feature like rolling updates ,rollbacks and scaling new features.
+
+Commands for deployment:
+kubectl  create -f deployment deployment.yml - it is used to create a deployment file similar to previous ones(replica and yml files)
+
+kubectl apply -f deployment.yaml - (updating the deployment)applying the deployment using this commands
+
+Verifying the deployments using below commands
+kubectl get deployments
+kubectl get pods
+
+ 
+Kubernetes Update and Rollback Concepts
+-Kubernetes allows you to update an application running in a cluster without downtime. If something goes wrong, you can rollback to a previous stable version. These updates are managed through Deployments.
+
+
+ 

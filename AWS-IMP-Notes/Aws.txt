@@ -1,0 +1,111 @@
+Days:
+day1
+-AWS console and introduction
+-IAM  
+ -IAM is a Global service mainly for Authentication and Authorization 
+ -Route53 is also a global service
+
+
+Cloud formation: It is mainy for infrastructure as a code 
+
+Type of instance:
+1. On demand
+2. Reserved
+3. Spot instance
+
+
+GLobal infrastructure:
+Region 
+Availability zone
+edge location 
+
+CDN(CONTENT DELIVERY NETWORK): origin of the data is somewhere else but 
+
+Types of machine type
+1.General  purpose type
+2.storage type 
+3.memory type
+4.Network optimized
+5.Compute optimized
+
+NACL-Network access control list 
+
+IAM is a Global service mainly for Authentication and Authorization 
+
+JSON-javascript object notation
+
+IAM policy
+-Identity based policy 
+-Resource based policy-eg:sns,s3
+
+Compute services
+Ec2
+-on demand
+-Reserved
+-spot instance
+
+
+You can connect Aws through console,Cli,sdk/cdk,Iac
+
+6 pillars of Aws
+-operational excellence, security, reliability, performance efficiency, cost optimization, and sustainability
+
+Three types of storage 
+-object storage -s3 
+-block storage -EBS
+-File storage -EFS
+
+-Compute service
+-IAM
+-Storage
+-container
+-Integration service (SNS SQS)
+-Serverless service(api,dynamo db,lambda)
+-Database service-Rds
+-Monitoring service-cloud watch 
+-Management services and Govt services
+-Network services(vpc,loadbalancer)
+
+
+DEVOPS PROFESSIONAL:
+-code build
+-code pipeline
+-system manager
+
+
+-Difference between dedicated instance and dedicated host
+-Difference between SAAS,PAS,IAS
+-Purchase options
+-What is placement group 
+
+
+DAY-2
+
+IAM user 
+Group 
+Roles
+
+
+Notes:
+WHat is webserver 
+what is app server
+what is the difference between webserver and appserver 
+what is placement group 
+
+Tasks:
+launch Linux vm using ssh client 
+launch windows vm connect using rdp client 
+launch Linux vm install deploy a webserver static webpage apache server(manual) you can have ur own webpage
+launch Linux vm deploy static webpage with apache server(bootstrap script)
+Create IAM role for ec2 with s3 permission and assume the role for the ec2 instance 
+
+
+
+
+Day 4 -task
+1.Create Iam user attach the Iam user to policy Iam role and attach ec2 instance 
+2.Enable mfa
+3.Create access key and secret key through cli
+4.create an iam role and attacht to ec2 instance and validate through cli command 
+5.peform various operation on s3 and ec2
+
